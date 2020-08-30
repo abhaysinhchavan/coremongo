@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "a5a71755-0a46-4a99-aae0-43ca724de603",
+		"name": "coreMongoDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "user123",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/tasks/images/pic.jpeg"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "9769557389",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "abhay",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50700/api/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50700",
+					"path": [
+						"api",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"searchType\":\"equal\",\r\n\"searchOn\":\"vehicleType\",\r\n\"pageSize\":2,\r\n\"pageNum\":1,\r\n\"searchValue\":\"Bike\"}"
+				},
+				"url": {
+					"raw": "http://localhost:50700/api/vehicle/getlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50700",
+					"path": [
+						"api",
+						"vehicle",
+						"getlist"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
