@@ -25,7 +25,8 @@ Genral :
     Both API basics implemented and certain things which are not done like loggin exceptions and configs reading due to limitted
     time available. All the code is self written and hardly something referred from internet. 
     None is copied from anywhere. 
-    Mongo DB DAL 
+    Mongo DB DAL is written manully and generic to handle dynamic search. 
+    Indexing can be done on multiple fields to make them unique and searchable. 
 
 1. User controller : 
 	
